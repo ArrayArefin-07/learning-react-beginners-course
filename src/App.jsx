@@ -44,6 +44,7 @@ function App(){
     <Student name="Talha" age={24} isStudent={false} />
     <Student name="Siyam" age={52} isStudent={false} />
     <Student name="Mahi" age={20} isStudent={true} />
+    <Student/>
     </>
 
   )
