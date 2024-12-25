@@ -4,7 +4,8 @@
 // import Card from "./Card";
 // import Button from "./Button/Button";
 // import Student from "./Student";
-import UserGreeting from "./UserGreeting";
+// import UserGreeting from "./UserGreeting";
+import List from "./List";
 
 // function App() {
 //   return(
@@ -54,13 +55,21 @@ import UserGreeting from "./UserGreeting";
 
 //conditional rendering
 
+// function App(){
+//   return(
+//     <>
+//     <UserGreeting isLoggedIn={true} username="arefin" />
+//     <UserGreeting isLoggedIn={true}/>
+//     </>
+//   )
+// }
+
+//render lists
+
 function App(){
-  return(
-    <>
-    <UserGreeting isLoggedIn={true} username="arefin" />
-    <UserGreeting isLoggedIn={true}/>
-    </>
-  )
+return(
+  <List/>
+);
 }
 
 
