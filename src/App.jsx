@@ -2,7 +2,8 @@
 // import Footer from "./Footer";
 // import Food from "./Food";
 // import Card from "./Card";
-import Button from "./Button/Button";
+// import Button from "./Button/Button";
+import Student from "./Student";
 
 // function App() {
 //   return(
@@ -28,10 +29,18 @@ import Button from "./Button/Button";
 //   );
 // }
 
+// function App(){
+//   return(
+//     <>
+//     <Button />
+//     </>
+//   )
+// }
+
 function App(){
   return(
     <>
-    <Button />
+    <Student name="Arefin" />
     </>
   )
 }
