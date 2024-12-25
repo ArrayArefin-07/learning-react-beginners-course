@@ -40,8 +40,12 @@ import Student from "./Student";
 function App(){
   return(
     <>
-    <Student name="Arefin" />
+    <Student name="Arefin" age={30} isStudent={true} />
+    <Student name="Talha" age={24} isStudent={false} />
+    <Student name="Siyam" age={52} isStudent={false} />
+    <Student name="Mahi" age={20} isStudent={true} />
     </>
+
   )
 }
 
