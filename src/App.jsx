@@ -58,6 +58,7 @@ function App(){
   return(
     <>
     <UserGreeting isLoggedIn={true} username="arefin" />
+    <UserGreeting isLoggedIn={true}/>
     </>
   )
 }
