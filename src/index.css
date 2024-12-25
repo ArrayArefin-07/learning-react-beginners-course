@@ -31,8 +31,7 @@
 
 
 
-
-.student{
+/* .student{
   font-family: Arial, sans-serif;
   font-size: 2em;
   padding: 10px;
@@ -41,4 +40,22 @@
 }
 .student p{
  margin: 0; 
+} */
+
+
+.welcome-message{
+  font-size: 2.5em;
+  background-color: hsl(120, 100%, 42%);
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  margin: 0;
+}
+.login-prompt{
+  font-size: 2.5em;
+  background-color: hsl(0, 100%, 42%);
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  margin: 0;
 }

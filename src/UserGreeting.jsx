@@ -10,6 +10,8 @@ function UserGreeting(props){
   // }
 
   //using ternary operator
-  return props.isLoggedIn ? <h2>Welcome {props.username}</h2> : <h2>Please Login to Continue</h2>
+  return props.isLoggedIn ? 
+  <h2 className="welcome-message"> Welcome {props.username}</h2> : 
+  <h2 className="login-prompt"> Please Login to Continue</h2>
 }
 export default UserGreeting
