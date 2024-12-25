@@ -20,7 +20,7 @@ function UserGreeting(props) {
   return props.isLoggedIn ? welcomeMessage : loginPrompt;
 }
 
-UserGreeting.prototypes = {
+UserGreeting.proptypes = {
   isLoggedIn: PropTypes.bool,
   username: PropTypes.string,
 }
