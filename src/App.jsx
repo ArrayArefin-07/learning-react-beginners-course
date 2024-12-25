@@ -1,7 +1,8 @@
 // import Header from "./Header"
 // import Footer from "./Footer";
 // import Food from "./Food";
-import Card from "./Card";
+// import Card from "./Card";
+import Button from "./Button";
 
 // function App() {
 //   return(
@@ -16,15 +17,25 @@ import Card from "./Card";
 //   );
 // }
 
-function App() {
-  return (
+// function App() {
+//   return (
+//     <>
+//       <Card />
+//       <Card />
+//       <Card />
+//       <Card />
+//     </>
+//   );
+// }
+
+function App(){
+  return(
     <>
-      <Card />
-      <Card />
-      <Card />
-      <Card />
+    <Button />
     </>
-  );
+  )
 }
+
+
 
 export default App;
