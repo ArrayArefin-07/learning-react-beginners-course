@@ -7,7 +7,9 @@
 // import UserGreeting from "./UserGreeting";
 // import List from "./List";
 // import Button from "./Button";
-import ProfilePicture from "./ProfilePicture";
+// import ProfilePicture from "./ProfilePicture";
+import { useState } from "react";
+import MyComponent from "./MyComponent";
 
 // function App() {
 //   return(
@@ -96,12 +98,23 @@ import ProfilePicture from "./ProfilePicture";
 // }
 
 
-//click event  
-function App() {
-  return(<>
-  {/* <Button/> */}
-  <ProfilePicture/>
-  </>);
+// //click event  
+// function App() {
+//   return(<>
+//   {/* <Button/> */}
+//   <ProfilePicture/>
+//   </>);
+// }
+
+// useState
+
+function App(){
+
+  return(
+    <>
+    <MyComponent/>
+    </>
+  )
 }
 
 export default App;
