@@ -43,7 +43,7 @@
 } */
 
 
-.welcome-message{
+/* .welcome-message{
   font-size: 2.5em;
   background-color: hsl(120, 100%, 42%);
   color: white;
@@ -60,4 +60,27 @@
   border-radius: 8px;
   margin: 0;
   margin-bottom: 15px;
+} */
+
+
+.list-category{
+  font-size: 2.5em;
+  font-weight: bold;
+  color: hsl(0, 0%, 20%);
+  margin-bottom: 10px;
+  text-align: center;
+  border: 3px solid;
+  border-radius: 5px;
+  background-color: hsl(185, 100%, 50%);
+}
+.list-items li{
+  font-size: 2em;
+  list-style: none;
+  color: hsl(0, 0%, 25%);
+  text-align: center;
+  margin: 0;
+}
+.list-items li:hover{
+  color: hsl(0, 0%, 45%);
+  cursor: pointer;
 }

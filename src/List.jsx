@@ -1,14 +1,14 @@
 
 
-function List(){
+function List(props){
 
   // const fruits = ["apple", "orange", "banana", "coconut", "pineapple"];
-  const fruits = [
-    {id: 1, name: "apple", calories: 95}, 
-    {id: 2, name: "orange", calories: 45}, 
-    {id: 3, name: "banana", calories: 105}, 
-    {id: 4, name: "coconut", calories: 159}, 
-    {id: 5, name: "pineapple", calories: 37}];
+  // const fruits = [
+  //   {id: 1, name: "apple", calories: 95}, 
+  //   {id: 2, name: "orange", calories: 45}, 
+  //   {id: 3, name: "banana", calories: 105}, 
+  //   {id: 4, name: "coconut", calories: 159}, 
+  //   {id: 5, name: "pineapple", calories: 37}];
 
   // fruits.sort((a,b) => a.name.localeCompare(b.name)); //Alphabetical order
   // fruits.sort((a,b) => b.name.localeCompare(a.name)); //reverse Alphabetical order
@@ -28,14 +28,24 @@ function List(){
   //high calories fruits
   // const listItems = highCalFruits.map(highCalFruits => <li key={highCalFruits.id}>{highCalFruits.name}: &nbsp; <b>{highCalFruits.calories}</b> </li>);
 
+  //  //display original array
+  //  const listItems = fruits.map(fruit => <li key={fruit.id}>{fruit.name}: &nbsp; <b>{fruit.calories}</b> </li>);
+
+
+  const catagory = props.catagory;
+  const itemList = props.items;
+
   //display original array
-  const listItems = fruits.map(fruit => <li key={fruit.id}>{fruit.name}: &nbsp; <b>{fruit.calories}</b> </li>);
+  const listItems = itemList.map(item => <li key={item.id}>{item.name}: &nbsp; <b>{item.calories}</b> </li>);
 
 
 
 
 
-  return(<ol>{listItems}</ol>);
+  return(<>
+  <h3 className="list-category">{catagory}</h3>
+  <ol className="list-items">{listItems}</ol>
+  </>);
 
 }
 
