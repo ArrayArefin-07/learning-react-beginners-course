@@ -84,8 +84,11 @@ function App() {
 
   return(
     <>
-    <List items={fruits} catagory="Fruits" />;
-    <List items={vegetables} catagory="Vegetables"/>;
+    <List items={fruits} category="Fruits" />;
+    <List items={vegetables} category="Vegetables"/>;
+
+    {fruits.length > 0 && <List items={fruits} category="Fruits" />}
+    {vegetables.length > 0 && <List items={vegetables} category="Vegetables"/>}
     </>
   ) 
 }

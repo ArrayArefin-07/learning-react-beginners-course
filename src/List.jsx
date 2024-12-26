@@ -32,7 +32,7 @@ function List(props){
   //  const listItems = fruits.map(fruit => <li key={fruit.id}>{fruit.name}: &nbsp; <b>{fruit.calories}</b> </li>);
 
 
-  const catagory = props.catagory;
+  const category = props.category;
   const itemList = props.items;
 
   //display original array
@@ -43,10 +43,17 @@ function List(props){
 
 
   return(<>
-  <h3 className="list-category">{catagory}</h3>
+  <h3 className="list-category">{category}</h3>
   <ol className="list-items">{listItems}</ol>
+
+  
+  
   </>);
 
+}
+List.defaultProps = {
+  category: "category",
+  items: [],
 }
 
 export default List
