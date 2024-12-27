@@ -5,6 +5,7 @@ function MyComponent(){
   // let [name, setName] = useState();
   const [name, setName] = useState("Guest");
   const [age, setAge] = useState(0);
+  const [isEmployed, setEmployed] = useState(false);
 
   // const updateName = () => {
   //   name = "Aefin";
@@ -16,7 +17,11 @@ function MyComponent(){
   }
 
   const incrementAge = () => {
-    setAge(age + 1)
+    setAge(age + 1);
+  }
+
+  const toggleEmployedStatus = () => {
+    setEmployed(!isEmployed);
   }
 
   return(
@@ -26,6 +31,9 @@ function MyComponent(){
 
       <p>Age: {age} </p>
       <button onClick={incrementAge}>Increment Age</button>
+
+      <p>Is Employed: {isEmployed ? "Yes" : "No"} </p>
+      <button onClick={toggleEmployedStatus}>toggle Status</button>
 
     </div>
   )

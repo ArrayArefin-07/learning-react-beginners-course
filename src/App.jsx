@@ -8,8 +8,10 @@
 // import List from "./List";
 // import Button from "./Button";
 // import ProfilePicture from "./ProfilePicture";
-import { useState } from "react";
-import MyComponent from "./MyComponent";
+
+// import { useState } from "react";
+// import MyComponent from "./MyComponent";
+import Counter from "./Counter";
 
 // function App() {
 //   return(
@@ -108,11 +110,19 @@ import MyComponent from "./MyComponent";
 
 // useState
 
-function App(){
+// function App(){
 
+//   return(
+//     <>
+//     <MyComponent/>
+//     </>
+//   )
+// }
+
+function App(){
   return(
     <>
-    <MyComponent/>
+    <Counter/>
     </>
   )
 }
