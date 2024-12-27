@@ -20,6 +20,7 @@ function Counter(){
    const [quantity, setQuantity] = useState(1);
    const [comment, setComment] = useState("");
    const [payment, setPayment] = useState("");
+   const [shipping, setShipping] = useState("");
   
     function handleNameChange(event){
       setName(event.target.value);
@@ -35,6 +36,10 @@ function Counter(){
 
     function handlePaymentChange(event){
       setPayment(event.target.value);
+    }
+
+    function handleShippingChange(event){
+      setShipping(event.target.value);
     }
 
   return(
@@ -68,6 +73,18 @@ function Counter(){
         </select>
         <p>payment: {payment}</p>
       </div>
+
+      <div>
+        <label>
+          <input type="radio" value="Pick Up" checked={shipping === "Pick Up"} onChange={handleShippingChange} /> Pick Up
+        </label>
+<br />
+        <labe>
+        <input type="radio" value="Delivery" checked={shipping === "Delivery"} onChange={handleShippingChange} /> Delivery
+        </labe>
+        <p>Shipping: {shipping}</p>
+      </div>
+
     </div>
   );
 
