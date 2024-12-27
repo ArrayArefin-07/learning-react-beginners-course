@@ -5,15 +5,25 @@ function Counter(){
   const [count, setCount] = useState(0);
 
   const increment = () => {
-    setCount(count + 1);
+    // setCount(count + 1);
+    //updater function (use first latter of decleared variable)
+    setCount(c => c + 1);
+    setCount(c => c + 1);
+    setCount(c => c +1);
   }
 
   const decrement = () => {
-    setCount(count - 1);
+    // setCount(count - 1);
+     //updater function (use first latter of decleared variable)
+     setCount(c => c - 1);
+     setCount(c => c - 1);
+     setCount(c => c - 1);
   }
 
   const reset = () => {
-    setCount(0);
+    // setCount(0);
+     //updater function (use first latter of decleared variable)
+     setCount(c => c = 0);
   }
 
    const [name, setName] = useState("Guest");
@@ -40,6 +50,24 @@ function Counter(){
 
     function handleShippingChange(event){
       setShipping(event.target.value);
+    }
+
+
+    //Update object 
+    const [car, setCar] = useState({
+      year: 2024,
+      make: "Ford",
+      model: "Mustang"
+    });
+
+    function handleYearChange(event){
+      setCar(c => ({...c, year: event.target.value}));
+    }
+    function handleMakeChange(event){
+      setCar(c => ({...c, make: event.target.value}));
+    }
+    function handleModelChange(event){
+      setCar(c => ({...c, model: event.target.value}));
     }
 
   return(
@@ -83,6 +111,14 @@ function Counter(){
         <input type="radio" value="Delivery" checked={shipping === "Delivery"} onChange={handleShippingChange} /> Delivery
         </labe>
         <p>Shipping: {shipping}</p>
+      </div>
+
+      <div>
+        <p>Your favourite car is: {car.year} {car.make} {car.model}</p>
+
+        <input type="number"  value={car.year} onChange={handleYearChange}/> <br/>
+        <input type="text"  value={car.make} onChange={handleMakeChange}/> <br/>
+        <input type="text"  value={car.model} onChange={handleModelChange}/> <br/>
       </div>
 
     </div>

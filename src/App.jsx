@@ -11,8 +11,8 @@
 
 // import { useState } from "react";
 // import MyComponent from "./MyComponent";
-// import Counter from "./Counter";
-import ColorPicker from "./ColorPicker";
+import Counter from "./Counter";
+// import ColorPicker from "./ColorPicker";
 
 
 // function App() {
@@ -121,13 +121,13 @@ import ColorPicker from "./ColorPicker";
 //   )
 // }
 
-// function App(){
-//   return(
-//     <>
-//     <Counter/>
-//     </>
-//   )
-// }
+function App(){
+  return(
+    <>
+    <Counter/>
+    </>
+  )
+}
 
 // function App(){
 //   return(
@@ -137,10 +137,10 @@ import ColorPicker from "./ColorPicker";
 //   )
 // }
 
-function App(){
-  return(
-  <ColorPicker/>
-)
-}
+// function App(){
+//   return(
+//   <ColorPicker/>
+// )
+// }
 
 export default App;
