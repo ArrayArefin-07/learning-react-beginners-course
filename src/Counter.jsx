@@ -19,6 +19,7 @@ function Counter(){
    const [name, setName] = useState("Guest");
    const [quantity, setQuantity] = useState(1);
    const [comment, setComment] = useState("");
+   const [payment, setPayment] = useState("");
   
     function handleNameChange(event){
       setName(event.target.value);
@@ -30,6 +31,10 @@ function Counter(){
 
     function handleCommentChange(event){
       setComment(event.target.value);
+    }
+
+    function handlePaymentChange(event){
+      setPayment(event.target.value);
     }
 
   return(
@@ -52,6 +57,16 @@ function Counter(){
       <div>
         <textarea value={comment} onChange={handleCommentChange} placeholder="Enter delivery instructions"></textarea>
         <p>Comment: {comment}</p>
+      </div>
+      
+      <div>
+        <select value={comment} onChange={handlePaymentChange}>
+          <option value="">Select an option</option>
+          <option value="Visa">Visa</option>
+          <option value="Mastercard">Mastercard</option>
+          <option value="Giftcard">Giftcard</option>
+        </select>
+        <p>payment: {payment}</p>
       </div>
     </div>
   );
