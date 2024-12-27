@@ -13,7 +13,6 @@
 // import MyComponent from "./MyComponent";
 import Counter from "./Counter";
 
-import onChangeMyComponent from "./onChangeMyComponent";
 
 // function App() {
 //   return(

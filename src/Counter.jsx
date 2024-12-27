@@ -18,6 +18,7 @@ function Counter(){
 
    const [name, setName] = useState("Guest");
    const [quantity, setQuantity] = useState(1);
+   const [comment, setComment] = useState("");
   
     function handleNameChange(event){
       setName(event.target.value);
@@ -25,6 +26,10 @@ function Counter(){
 
     function handleQuantityChange(event){
       setQuantity(event.target.value);
+    }
+
+    function handleCommentChange(event){
+      setComment(event.target.value);
     }
 
   return(
@@ -42,6 +47,11 @@ function Counter(){
       <div>
         <input value={quantity} onChange={handleQuantityChange} type="number"/>
         <p>Quantity: {quantity}</p>
+      </div>
+
+      <div>
+        <textarea value={comment} onChange={handleCommentChange} placeholder="Enter delivery instructions"></textarea>
+        <p>Comment: {comment}</p>
       </div>
     </div>
   );
