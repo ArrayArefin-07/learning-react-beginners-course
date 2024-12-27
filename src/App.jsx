@@ -11,7 +11,8 @@
 
 // import { useState } from "react";
 // import MyComponent from "./MyComponent";
-import Counter from "./Counter";
+// import Counter from "./Counter";
+import ColorPicker from "./ColorPicker";
 
 
 // function App() {
@@ -120,13 +121,13 @@ import Counter from "./Counter";
 //   )
 // }
 
-function App(){
-  return(
-    <>
-    <Counter/>
-    </>
-  )
-}
+// function App(){
+//   return(
+//     <>
+//     <Counter/>
+//     </>
+//   )
+// }
 
 // function App(){
 //   return(
@@ -135,5 +136,11 @@ function App(){
 //     </>
 //   )
 // }
+
+function App(){
+  return(
+  <ColorPicker/>
+)
+}
 
 export default App;
