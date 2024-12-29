@@ -70,6 +70,22 @@ function Counter(){
       setCar(c => ({...c, model: event.target.value}));
     }
 
+
+    //update ARRAY in state
+
+    const [foods, setFoods] = useState(["Apple", "Orange", "Banana"]);
+
+    function handleAddFood(){
+      const newFood = document.getElementById("foodInput").value;
+      document.getElementById("foodInput").value= "";
+
+      setFoods(f => [...f, newFood]);
+    }
+
+    function handleRemoveFood(){
+
+    }
+
   return(
     <div className="counter-container">
       <p className="count-display">{count}</p>
@@ -119,6 +135,15 @@ function Counter(){
         <input type="number"  value={car.year} onChange={handleYearChange}/> <br/>
         <input type="text"  value={car.make} onChange={handleMakeChange}/> <br/>
         <input type="text"  value={car.model} onChange={handleModelChange}/> <br/>
+      </div>
+
+      <div>
+        <h2>List of Food</h2>
+        <ul>
+          {foods.map((food, index) => <li key={index}>{food}</li>)}
+        </ul>
+        <input type="text" id="foodInput" placeholder="Enter food name" />
+        <button onClick={handleAddFood}>Add Food</button>
       </div>
 
     </div>
