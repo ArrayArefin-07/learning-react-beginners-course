@@ -86,6 +86,32 @@ function Counter(){
       setFoods(f => f.filter((_, i) => i !== index));
     }
 
+    //Update Array of object in state
+    const [cars, setCars] = useState([]);
+    const [carYear, setCarYear] = useState(new Date().getFullYear());
+    const [carMake, setCarMake] = useState("");
+    const [carModel, setCarModel] = useState("");
+
+    function handleAddCar(){
+
+    }
+
+    function handleRemoveCar(index){
+      
+    }
+
+    function handleYearChange(event){
+      setCarYear(event.target.value);
+    }
+
+    function handleMakeChange(event){
+      
+    }
+
+    function handleMdelChange(event){
+      
+    }
+
   return(
     <div className="counter-container">
       <p className="count-display">{count}</p>
@@ -144,6 +170,19 @@ function Counter(){
         </ul>
         <input type="text" id="foodInput" placeholder="Enter food name" />
         <button onClick={handleAddFood}>Add Food</button>
+      </div>
+
+      <div>
+          <h2>List of Car Objects</h2>
+          <ul>
+
+          </ul>
+
+          <input type="number" value={carYear} onChange={handleYearChange} /> <br/>
+          <input type="number" value={carMake} onChange={handleMakeChange} placeholder="Enter car make" /> <br/>
+          <input type="number" value={carModel} onChange={handleModelChange} placeholder="Enter car model" /> <br/>
+          
+          <button onClick={handleAddCar}>Add Car</button>
       </div>
 
     </div>
