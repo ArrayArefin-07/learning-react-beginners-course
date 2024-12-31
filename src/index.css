@@ -154,8 +154,8 @@ input[type="color"]{
 
 /* TO-DO-APP Design */
 
-body{
-  background-color: hsl(0, 0%, 10%);
+/* body{
+  background-color: hsl(0, 0%, 0%);
 }
 
 .to-do-list{
@@ -226,4 +226,5 @@ li{
   padding: 8px 12px;
   font-size: 1.4rem;
   margin-left: 10px;
-}
+} */
+ 

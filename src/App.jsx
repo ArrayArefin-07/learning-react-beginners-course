@@ -14,7 +14,8 @@
 // import Counter from "./Counter";
 // import ColorPicker from "./ColorPicker";
 
-import ToDoList from "./ToDoList";
+import MyComponent from "./MyComponent";
+// import ToDoList from "./ToDoList";
 
 
 // function App() {
@@ -145,10 +146,18 @@ import ToDoList from "./ToDoList";
 // )
 // }
 
+// function App(){
+//   return(
+//     <>
+//     <ToDoList/>
+//     </>
+//   )
+// }
+
 function App(){
   return(
     <>
-    <ToDoList/>
+    <MyComponent/>
     </>
   )
 }
