@@ -1,14 +1,23 @@
 import { useState } from "react";
 
 function ToDoList() {
-  const [tasks, setTasks] = useState(["Eat Breakfast", "Take a shower", "Work the dog"]);
+  const [tasks, setTasks] = useState([
+    "Eat Breakfast",
+    "Take a shower",
+    "Work the dog",
+  ]);
   const [newTask, setNewTask] = useState("");
 
   function handleInputChange(event) {
     setNewTask(event.target.value);
   }
 
-  function addTask() {}
+  function addTask() {
+    if (newTask.trim() !== "") {
+      setTasks((t) => [...t, newTask]);
+      setNewTask("");
+    }
+  }
 
   function deleteTask(index) {}
 
@@ -32,22 +41,21 @@ function ToDoList() {
       </div>
 
       <ol>
-        {tasks.map((task, index) => 
-        <li key={index}>
-          <span className="text">{task}</span>
-          <button className="delete-button" onClick={() => deleteTask(index)}>
-            Delete ❌           
-          </button>
-          <button className="move-button" onClick={() => moveTaskUp(index)}>
-            Up☝🏼            
-          </button>
-          <button className="move-button" onClick={() => moveTaskDown(index)}>
-            Down 👇🏼            
-          </button>
-        </li>
-        )}
+        {tasks.map((task, index) => (
+          <li key={index}>
+            <span className="text">{task}</span>
+            <button className="delete-button" onClick={() => deleteTask(index)}>
+              Delete ❌
+            </button>
+            <button className="move-button" onClick={() => moveTaskUp(index)}>
+              Up☝🏼
+            </button>
+            <button className="move-button" onClick={() => moveTaskDown(index)}>
+              Down 👇🏼
+            </button>
+          </li>
+        ))}
       </ol>
-
     </div>
   );
 }
