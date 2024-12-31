@@ -185,10 +185,10 @@ button{
 }
 
 .delete-button{
-  background-color: hsl(0, 100%, 53%);
+  background-color: hsl(0, 100%, 35%);
 }
 .delete-button:hover{
-  background-color: hsl(0, 100%, 42%);
+  background-color: hsl(0, 100%, 43%);
 }
 
 .move-button{
