@@ -231,7 +231,7 @@ li{
 
 /* style for digital clock */
 body{
-  background-image: url(assets/background_1.jpg);
+  background-image: url(assets/background_3.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -254,4 +254,10 @@ body{
   font-family: monospace;
   text-align: center;
   text-shadow: 3px 3px 5px hsl(0, 0%, 0%, 0.75);
+}
+
+
+.box{
+  border: 3px solid;
+  padding: 25px;
 }

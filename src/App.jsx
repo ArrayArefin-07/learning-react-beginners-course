@@ -17,6 +17,7 @@
 // import MyComponent from "./MyComponent";
 // import ToDoList from "./ToDoList";
 import DigitalClock from "./DigitalClock";
+import ComponentA from "./ComponentA";
 
 
 // function App() {
@@ -163,14 +164,26 @@ import DigitalClock from "./DigitalClock";
 //   )
 // }
 
+// function App(){
+//   return(
+//     <>
+//     <DigitalClock/>
+
+//     </>
+//   )
+// }
+
 function App(){
   return(
     <>
-    <DigitalClock/>
+    <ComponentA/>
 
     </>
   )
 }
+
+
+
 
 export default App;
 
