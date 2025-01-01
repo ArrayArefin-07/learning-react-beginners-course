@@ -14,8 +14,9 @@
 // import Counter from "./Counter";
 // import ColorPicker from "./ColorPicker";
 
-import MyComponent from "./MyComponent";
+// import MyComponent from "./MyComponent";
 // import ToDoList from "./ToDoList";
+import DigitalClock from "./DigitalClock";
 
 
 // function App() {
@@ -154,10 +155,18 @@ import MyComponent from "./MyComponent";
 //   )
 // }
 
+// function App(){
+//   return(
+//     <>
+//     <MyComponent/>
+//     </>
+//   )
+// }
+
 function App(){
   return(
     <>
-    <MyComponent/>
+    <DigitalClock/>
     </>
   )
 }
