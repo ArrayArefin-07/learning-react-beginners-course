@@ -1,5 +1,4 @@
-import React, {useState, useEffect} from "react"
-
+import React, { useState, useEffect } from "react";
 
 // function MyComponent(){
 
@@ -25,8 +24,6 @@ import React, {useState, useEffect} from "react"
 //     setEmployed(!isEmployed);
 //   }
 
-  
-
 //   return(
 //     <div>
 //       <p>Name: {name} </p>
@@ -49,34 +46,60 @@ import React, {useState, useEffect} from "react"
 // 2, useEffect(( => {}, [])) // Runs only on mount
 // 3. useEffect(() => {}, [value]) // Runs on mount + when value changes
 
-function MyComponent(){
+function MyComponent() {
+  // const [count, setCount] = useState(0);
+  // const [color, setColor] = useState("Green");
 
-  const [count, setCount] = useState(0);
-  const [color, setColor] = useState("Green");
+  // useEffect(() => {
+  //   document.title = `Count: ${count} ${color}`;
+  // }, [count, color])
+
+  // function addCount(){
+  //   setCount(c => c + 1);
+  // }
+
+  // function subtractCount(){
+  //   setCount(c => c - 1);
+  // }
+
+  // function changeColor(){
+  //   setColor(c => c === "Green" ? "Red" : "Green");
+  // }
+
+  //display height & width of window
+
+  const [width, setWidth] = useState(window.innerWidth);
+  const [height, setHeight] = useState(window.innerHeight);
 
   useEffect(() => {
-    document.title = `Count: ${count} ${color}`;
-  }, [count, color])
+    window.addEventListener("resize", handleResize);
+    console.log("EVENT LISTENER ADDED");
 
-  function addCount(){
-    setCount(c => c + 1);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      console.log("EVENT LISTENER REMOVED");
+    }
+  }, []);
+
+  useEffect(() => {
+    document.title = `size: ${width} x ${height}`;
+  }, [width, height])
+
+  function handleResize() {
+    setWidth(window.innerWidth);
+    setHeight(window.innerHeight);
   }
 
-  function subtractCount(){
-    setCount(c => c - 1);
-  }
-
-  function changeColor(){
-    setColor(c => c === "Green" ? "Red" : "Green");
-  }
-
-
-
-  return(<>
-        <p style={{color: color}}>Count: {count}</p>
+  return (
+    <>
+      {/* <p style={{color: color}}>Count: {count}</p>
         <button onClick={addCount}>Add</button>
         <button onClick={subtractCount}>Subtract</button> <br />
-        <button onClick={changeColor}>Change Color</button>
-  </>);
+        <button onClick={changeColor}>Change Color</button> */}
+
+      <p>Window Width: {width}</p>
+      <p>Window Height: {height}</p>
+    </>
+  );
 }
-export default MyComponent
+export default MyComponent;
