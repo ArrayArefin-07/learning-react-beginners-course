@@ -6,34 +6,57 @@
 // 2. Handling Focus, Animation, and Transitions
 // 3. Managing Timer and Intervals
 
+import React, { useState, useEffect, useRef } from "react";
 
-
-import React, {useState, useEffect, useRef} from "react";
-
-function ComponentUseRefe(){
-
+function ComponentUseRefe() {
   // let [number, setNumber] = useState(0);
   const ref = useRef(0);
+  const inputRef1 = useRef(null);
+  const inputRef2 = useRef(null)
+  const inputRef3 = useRef(null)
 
+  // console.log(ref);
 
-    useEffect(() => {
-      console.log("Component Rendered");
-    });
+  useEffect(() => {
+    console.log("Component Rendered");
+    // console.log(inputRef);
+  });
 
+  function handleClick1() {
+    // setNumber(n => n + 1);
+    // ref.current++;
+    inputRef1.current.focus();
+    inputRef1.current.style.backgroundColor = "yellow";
+    inputRef2.current.style.backgroundColor = "";
+    inputRef3.current.style.backgroundColor = "";
+  }
 
-    function handleClick(){
-      // setNumber(n => n + 1);
-      ref.current++;
-      console.log(ref.current);
-    }
+  function handleClick2(){
+    inputRef2.current.focus();
+    inputRef2.current.style.backgroundColor = "";
+    inputRef2.current.style.backgroundColor = "yellow";
+    inputRef3.current.style.backgroundColor = "";
+  }
 
-  return(
+  function handleClick3(){
+    inputRef3.current.focus();
+    inputRef3.current.style.backgroundColor = "";
+    inputRef2.current.style.backgroundColor = "";
+    inputRef3.current.style.backgroundColor = "yellow";
+  }
 
-    <button onClick={handleClick}>
-      Click Me.!
-    </button>
-  )
+  return (
+    <div>
+      <button onClick={handleClick1}>Click Me 1.!</button> <br/>
+      <input type="text" ref={inputRef1} /> <hr />
 
+      <button onClick={handleClick2}>Click Me 2.!</button> <br/>
+      <input type="text" ref={inputRef2} /> <hr />
+
+      <button onClick={handleClick3}>Click Me 3.!</button> <br/>
+      <input type="text" ref={inputRef3} />
+    </div>
+  );
 }
 
-export default ComponentUseRefe; 
+export default ComponentUseRefe;
