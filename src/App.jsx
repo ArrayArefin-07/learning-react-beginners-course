@@ -16,8 +16,9 @@
 
 // import MyComponent from "./MyComponent";
 // import ToDoList from "./ToDoList";
-import DigitalClock from "./DigitalClock";
-import ComponentA from "./ComponentA";
+// import DigitalClock from "./DigitalClock";
+// import ComponentA from "./ComponentA";
+import ComponentUseRefe from "./ComponentUseRefe";
 
 
 // function App() {
@@ -173,16 +174,20 @@ import ComponentA from "./ComponentA";
 //   )
 // }
 
-function App(){
-  return(
-    <>
-    <ComponentA/>
+// function App(){
+//   return(
+//     <>
+//     <ComponentA/>
 
-    </>
+//     </>
+//   )
+// }
+
+function  App(){
+  return(
+    <ComponentUseRefe/>
   )
 }
-
-
 
 
 export default App;

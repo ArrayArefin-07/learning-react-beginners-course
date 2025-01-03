@@ -230,7 +230,7 @@ li{
  
 
 /* style for digital clock */
-body{
+/* body{
   background-image: url(assets/background_3.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -260,4 +260,4 @@ body{
 .box{
   border: 3px solid;
   padding: 25px;
-}
+} */
